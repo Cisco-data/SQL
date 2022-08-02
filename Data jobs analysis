@@ -1,0 +1,31 @@
+#Table creation query#
+
+CREATE TABLE data_analyst(
+job_id SERIAL PRIMARY KEY,
+title VARCHAR(50),
+salary INTEGER,
+tech_stack VARCHAR(100),
+job_growth SMALLINT,
+remote VARCHAR(50),
+city VARCHAR(50),
+state VARCHAR(50),
+college VARCHAR(50)
+
+#Inserting data into table#
+
+INSERT INTO data_analyst(title,salary,tech_stack,job_growth,remote,city,state,college)
+VALUES 
+      ('data_analyst',45000,'sql,powerbi,excel',25,'yes','orlando','florida','bachelors')
+      
+     
+#filtering by job growth#
+
+      SELECT job_growth,title
+FROM data_analyst
+LIMIT 5
+
+#filtering uding where clause#
+
+ELECT salary,title,city,college
+FROM data_analyst 
+WHERE college='bachelors'
